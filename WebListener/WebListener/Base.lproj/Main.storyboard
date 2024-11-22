@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebListener" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9f-WB-tRG">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8nc-Co-IqI">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="abstract-gradient-neon-lights" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-MM-RvE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="853"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="systemThickMaterial"/>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eEwtt1U" translatesAutoresizingMaskIntoConstraints="NO" id="kH4-oR-gwg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-VX-fYz">
+                                <rect key="frame" x="8" y="116" width="377" height="84.333333333333314"/>
+                                <string key="text">Web listener for 
+Grand Theft AutoVI</string>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="acO-Nt-3Ou">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pD9-VX-fYz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-267.83333333333337" id="3Md-Bw-4XU"/>
+                            <constraint firstItem="u9f-WB-tRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3NI-6K-pEq"/>
+                            <constraint firstItem="kH4-oR-gwg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7cF-0L-8Qh"/>
+                            <constraint firstAttribute="bottom" secondItem="u9f-WB-tRG" secondAttribute="bottom" id="8FD-Qq-a2b"/>
+                            <constraint firstItem="u9f-WB-tRG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dxt-Ud-nnv"/>
+                            <constraint firstItem="pD9-VX-fYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OA4-t1-ybq"/>
+                            <constraint firstItem="acO-Nt-3Ou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XtO-Gf-c8s"/>
+                            <constraint firstItem="kH4-oR-gwg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZFC-i8-fd8"/>
+                            <constraint firstItem="kH4-oR-gwg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ag5-yv-zyF"/>
+                            <constraint firstItem="acO-Nt-3Ou" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jz4-CC-smJ"/>
+                            <constraint firstItem="kH4-oR-gwg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rzs-zB-J97"/>
+                            <constraint firstItem="u9f-WB-tRG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rzy-HK-HMH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="acO-Nt-3Ou" id="JvC-lB-1Gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="abstract-gradient-neon-lights" width="6720" height="4480"/>
+        <image name="eEwtt1U" width="1920" height="1080"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
