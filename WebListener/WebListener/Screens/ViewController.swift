@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(checkWebsiteForKeyword), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(checkWebsiteForKeyword), userInfo: nil, repeats: true)
         print("Zamanlayıcı başlatıldı. Her 3 dakikada bir kontrol edilecek.")
     }
     
@@ -59,7 +59,8 @@ class ViewController: UIViewController {
                 print("Grand Theft Auto bulundu!")
                 self?.playAlertSound()
             } else {
-                print("Grand Theft Auto bulunamadı.")
+                self?.playAlert2()
+                print("bulamadım!")
             }
         }
         
@@ -90,12 +91,26 @@ class ViewController: UIViewController {
     }
     
     func speakText(_ text: String) {
-            let speechUtterance = AVSpeechUtterance(string: text)
-            
-            speechUtterance.voice = AVSpeechSynthesisVoice(language: "tr-TR")
-            speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate
-            speechUtterance.pitchMultiplier = 1.0
-            speechSynthesizer.speak(speechUtterance)
+        let speechUtterance = AVSpeechUtterance(string: text)
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "tr-TR")
+        speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate
+        speechUtterance.pitchMultiplier = 1.0
+        speechSynthesizer.speak(speechUtterance)
+    }
+    
+    func playAlert2() {
+        guard let soundURL = Bundle.main.url(forResource: "sound2", withExtension: "mp3") else {
+            print("Ses dosyası bulunamadı.")
+            return
         }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            audioPlayer?.play()
+            print("Ses çalınıyor!")
+        } catch {
+            print("Ses dosyası çalınırken hata: \(error)")
+        }
+    }
 }
 
